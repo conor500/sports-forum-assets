@@ -3,143 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
 <title>You're speaking at Sports Academi</title>
-<!--
-  Sports Academi speaker confirmation (HTML email for Gmail htmlBody).
-  Fill every double-brace token before sending. No token may be left in the sent email.
-  Download links (one tap, file downloads straight away; both decks must be shared "anyone with the link"):
-    poster_png   = https://docs.google.com/presentation/d/<pack id>/export/png        (first slide = poster)
-    carousel_pdf = https://docs.google.com/presentation/d/<pack id>/export/pdf        (whole pack = LinkedIn carousel)
-    story_png    = https://docs.google.com/presentation/d/<story id>/export/png
-    qr_png       = the qrserver URL for register_link
-  Thumbnails:
-    poster_thumb = https://drive.google.com/thumbnail?id=<pack id>&sz=w800
-    story_thumb  = https://drive.google.com/thumbnail?id=<story id>&sz=w600
--->
+<!-- v2: all text is dark on light. Mail apps that strip background colours still show everything. Buttons are outlined, not filled. -->
 </head>
-<body style="margin:0;padding:0;background:#EFEBE3;">
+<body style="margin:0;padding:0;background:#FFFFFF;" bgcolor="#FFFFFF">
 <div style="display:none;max-height:0;overflow:hidden;">You're on for {{date_long}}. Your Meet link, your registration link and your promo pack, ready to post.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#EFEBE3;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background:#FFFFFF;">
 <tr><td align="center" style="padding:24px 12px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;font-family:Helvetica,Arial,sans-serif;color:#3A3732;">
 
   <!-- logo -->
-  <tr><td align="center" style="padding:4px 0 20px;">
-    <img src="https://raw.githubusercontent.com/conor500/sports-forum-assets/main/email/academi/logo-academi-sports-v1.png" width="220" alt="Sports Academi" style="display:block;width:220px;max-width:60%;height:auto;border:0;">
+  <tr><td align="left" style="padding:4px 0 22px;">
+    <img src="https://raw.githubusercontent.com/conor500/sports-forum-assets/main/email/academi/logo-academi-sports-v1.png" width="200" alt="Sports Academi" style="display:block;width:200px;max-width:55%;height:auto;border:0;">
   </td></tr>
+
+  <!-- blue rule -->
+  <tr><td height="6" bgcolor="#2B4BD8" style="height:6px;line-height:6px;font-size:0;background:#2B4BD8;">&nbsp;</td></tr>
 
   <!-- hero -->
-  <tr><td style="background:#2B4BD8;padding:36px 32px 34px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td style="background:#EFEBE3;color:#141414;font-size:11px;font-weight:bold;letter-spacing:2px;padding:6px 10px;">YOU'RE ON</td>
-    </tr></table>
-    <div style="font-size:40px;line-height:1.02;font-weight:900;color:#FFFFFF;letter-spacing:-1px;padding-top:18px;">you're speaking at sports academi!</div>
-    <div style="font-size:17px;line-height:1.5;color:#EFEBE3;padding-top:14px;">Thanks for jumping onboard, {{speaker_first}}. Everything you need is below, including a promo pack you can post in one tap.</div>
+  <tr><td style="padding:28px 0 26px;">
+    <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">YOU'RE ON</div>
+    <div style="font-size:38px;line-height:1.05;font-weight:900;color:#141414;letter-spacing:-1px;padding-top:10px;">you're speaking at sports academi!</div>
+    <div style="font-size:17px;line-height:1.55;color:#3A3732;padding-top:14px;">Thanks for jumping onboard, {{speaker_first}}. Everything you need is below, including a promo pack you can post in one tap.</div>
   </td></tr>
 
-  <!-- session card -->
-  <tr><td style="background:#FFFFFF;padding:28px 32px 30px;">
+  <!-- session -->
+  <tr><td style="border-top:1px solid #DDD7CC;padding:26px 0 28px;">
     <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">YOUR SESSION</div>
-    <div style="font-size:26px;line-height:1.12;font-weight:900;color:#141414;padding-top:8px;">{{talk_title}}</div>
+    <div style="font-size:26px;line-height:1.15;font-weight:900;color:#141414;padding-top:8px;">{{talk_title}}</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;">
       <tr>
-        <td width="50%" valign="top" style="padding:0 8px 14px 0;">
+        <td width="50%" valign="top" style="padding:0 8px 16px 0;">
           <div style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8C867C;">WHEN</div>
           <div style="font-size:16px;font-weight:bold;color:#141414;padding-top:4px;">{{date_long}}, 7pm UK/Irish</div>
         </td>
-        <td width="50%" valign="top" style="padding:0 0 14px 8px;">
+        <td width="50%" valign="top" style="padding:0 0 16px 8px;">
           <div style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8C867C;">WHERE</div>
           <div style="font-size:16px;font-weight:bold;color:#141414;padding-top:4px;">Google Meet, 45 min + Q&amp;A</div>
         </td>
       </tr>
     </table>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td align="center" style="background:#2B4BD8;"><a href="{{meet_link}}" style="display:block;padding:16px;font-size:16px;font-weight:bold;color:#FFFFFF;text-decoration:none;">Open your Google Meet link</a></td>
+      <td align="center" style="border:2px solid #2B4BD8;"><a href="{{meet_link}}" style="display:block;padding:15px;font-size:16px;font-weight:bold;color:#2B4BD8;text-decoration:none;">Open your Google Meet link &rarr;</a></td>
     </tr></table>
     <div style="font-size:14px;line-height:1.55;color:#3A3732;padding-top:14px;">It's in your calendar invite too. Your personal registration link, for anyone you want in the room:<br><a href="{{register_link}}" style="color:#2B4BD8;font-weight:bold;word-break:break-all;">{{register_link_display}}</a></div>
   </td></tr>
 
-  <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
-
   <!-- promo pack -->
-  <tr><td style="background:#FFFFFF;padding:28px 32px 30px;">
+  <tr><td style="border-top:1px solid #DDD7CC;padding:26px 0 28px;">
     <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">YOUR PROMO PACK</div>
-    <div style="font-size:26px;line-height:1.12;font-weight:900;color:#141414;padding-top:8px;">ready to post. one tap each.</div>
-    <div style="font-size:15px;line-height:1.55;padding-top:8px;">Tap a button and the file downloads straight to your phone or laptop.</div>
+    <div style="font-size:26px;line-height:1.15;font-weight:900;color:#141414;padding-top:8px;">ready to post. one tap each.</div>
+    <div style="font-size:15px;line-height:1.55;padding-top:8px;color:#3A3732;">Tap a button and the file downloads straight to your phone or laptop.</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;">
       <tr>
         <td width="58%" valign="top" style="padding-right:8px;">
-          <a href="{{poster_png}}"><img src="{{poster_thumb}}" width="300" alt="Your 4:5 poster" style="display:block;width:100%;height:auto;border:0;background:#EFEBE3;"></a>
+          <a href="{{poster_png}}"><img src="{{poster_thumb}}" width="300" alt="Your 4:5 poster" style="display:block;width:100%;height:auto;border:1px solid #DDD7CC;"></a>
         </td>
         <td width="42%" valign="top" style="padding-left:8px;">
-          <a href="{{story_png}}"><img src="{{story_thumb}}" width="200" alt="Your 9:16 story" style="display:block;width:100%;height:auto;border:0;background:#EFEBE3;"></a>
+          <a href="{{story_png}}"><img src="{{story_thumb}}" width="200" alt="Your 9:16 story" style="display:block;width:100%;height:auto;border:1px solid #DDD7CC;"></a>
         </td>
       </tr>
     </table>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
       <tr>
-        <td width="50%" style="padding:0 5px 10px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background:#141414;"><a href="{{poster_png}}" style="display:block;padding:14px 8px;font-size:15px;font-weight:bold;color:#EFEBE3;text-decoration:none;">Poster &middot; PNG</a></td></tr></table></td>
-        <td width="50%" style="padding:0 0 10px 5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background:#141414;"><a href="{{carousel_pdf}}" style="display:block;padding:14px 8px;font-size:15px;font-weight:bold;color:#EFEBE3;text-decoration:none;">LinkedIn carousel &middot; PDF</a></td></tr></table></td>
+        <td width="50%" style="padding:0 5px 10px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="border:2px solid #141414;"><a href="{{poster_png}}" style="display:block;padding:13px 8px;font-size:15px;font-weight:bold;color:#141414;text-decoration:none;">Poster &middot; PNG</a></td></tr></table></td>
+        <td width="50%" style="padding:0 0 10px 5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="border:2px solid #141414;"><a href="{{carousel_pdf}}" style="display:block;padding:13px 8px;font-size:15px;font-weight:bold;color:#141414;text-decoration:none;">LinkedIn carousel &middot; PDF</a></td></tr></table></td>
       </tr>
       <tr>
-        <td width="50%" style="padding:0 5px 0 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background:#141414;"><a href="{{story_png}}" style="display:block;padding:14px 8px;font-size:15px;font-weight:bold;color:#EFEBE3;text-decoration:none;">Story &middot; PNG</a></td></tr></table></td>
-        <td width="50%" style="padding:0 0 0 5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background:#141414;"><a href="{{qr_png}}" style="display:block;padding:14px 8px;font-size:15px;font-weight:bold;color:#EFEBE3;text-decoration:none;">QR code &middot; PNG</a></td></tr></table></td>
+        <td width="50%" style="padding:0 5px 0 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="border:2px solid #141414;"><a href="{{story_png}}" style="display:block;padding:13px 8px;font-size:15px;font-weight:bold;color:#141414;text-decoration:none;">Story &middot; PNG</a></td></tr></table></td>
+        <td width="50%" style="padding:0 0 0 5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="border:2px solid #141414;"><a href="{{qr_png}}" style="display:block;padding:13px 8px;font-size:15px;font-weight:bold;color:#141414;text-decoration:none;">QR code &middot; PNG</a></td></tr></table></td>
       </tr>
     </table>
     <div style="font-size:13px;line-height:1.5;color:#8C867C;padding-top:12px;">Post the carousel as a LinkedIn document, the poster on your feed, and the story on Instagram with your link sticker.</div>
   </td></tr>
 
-  <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
-
   <!-- captions -->
-  <tr><td style="background:#FFFFFF;padding:28px 32px 26px;">
+  <tr><td style="border-top:1px solid #DDD7CC;padding:26px 0 26px;">
     <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">CAPTIONS TO COPY</div>
     <div style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8C867C;padding-top:16px;">LINKEDIN</div>
-    <div style="font-size:15px;line-height:1.55;color:#141414;background:#EFEBE3;padding:14px 16px;margin-top:6px;">{{caption_linkedin}}</div>
+    <div style="font-size:15px;line-height:1.55;color:#141414;border-left:3px solid #2B4BD8;padding:2px 0 2px 14px;margin-top:6px;">{{caption_linkedin}}</div>
     <div style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8C867C;padding-top:16px;">INSTAGRAM</div>
-    <div style="font-size:15px;line-height:1.55;color:#141414;background:#EFEBE3;padding:14px 16px;margin-top:6px;">{{caption_instagram}}</div>
+    <div style="font-size:15px;line-height:1.55;color:#141414;border-left:3px solid #2B4BD8;padding:2px 0 2px 14px;margin-top:6px;">{{caption_instagram}}</div>
     <div style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8C867C;padding-top:16px;">X</div>
-    <div style="font-size:15px;line-height:1.55;color:#141414;background:#EFEBE3;padding:14px 16px;margin-top:6px;">{{caption_x}}</div>
+    <div style="font-size:15px;line-height:1.55;color:#141414;border-left:3px solid #2B4BD8;padding:2px 0 2px 14px;margin-top:6px;">{{caption_x}}</div>
   </td></tr>
 
-  <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
-
   <!-- community -->
-  <tr><td style="background:#141414;padding:30px 32px;">
-    <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#EFEBE3;">BEFORE THE NIGHT</div>
-    <div style="font-size:26px;line-height:1.12;font-weight:900;color:#FFFFFF;padding-top:8px;">make sure you join the community</div>
-    <div style="font-size:15px;line-height:1.55;color:#EFEBE3;padding-top:10px;">It's free, it's on WhatsApp, and it's where athletes, coaches and practitioners will hear about your session first. Say hello and drop this in the group:</div>
-    <div style="font-size:15px;line-height:1.55;color:#141414;background:#EFEBE3;padding:14px 16px;margin-top:12px;">{{whatsapp_message}}</div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;"><tr>
-      <td align="center" style="background:#EFEBE3;"><a href="https://chat.whatsapp.com/BKzWZgolWF00YniMUyg0I1" style="display:block;padding:16px;font-size:16px;font-weight:bold;color:#141414;text-decoration:none;">Join the free community</a></td>
+  <tr><td style="border-top:1px solid #DDD7CC;padding:26px 0 28px;">
+    <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">BEFORE THE NIGHT</div>
+    <div style="font-size:26px;line-height:1.15;font-weight:900;color:#141414;padding-top:8px;">make sure you join the community</div>
+    <div style="font-size:15px;line-height:1.55;color:#3A3732;padding-top:10px;">It's free, it's on WhatsApp, and it's where athletes, coaches and practitioners will hear about your session first. Say hello and drop this in the group:</div>
+    <div style="font-size:15px;line-height:1.55;color:#141414;border-left:3px solid #2B4BD8;padding:2px 0 2px 14px;margin-top:12px;">{{whatsapp_message}}</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr>
+      <td align="center" style="border:2px solid #2B4BD8;"><a href="https://chat.whatsapp.com/BKzWZgolWF00YniMUyg0I1" style="display:block;padding:15px;font-size:16px;font-weight:bold;color:#2B4BD8;text-decoration:none;">Join the free community &rarr;</a></td>
     </tr></table>
   </td></tr>
 
-  <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
-
-  <!-- prep -->
-  <tr><td style="background:#FFFFFF;padding:28px 32px 26px;">
+  <!-- on the day -->
+  <tr><td style="border-top:1px solid #DDD7CC;padding:26px 0 24px;">
     <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">ON THE DAY</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;font-size:15px;line-height:1.5;color:#141414;">
-      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">01</td><td style="padding:6px 0;">Test your Meet link a day or two before.</td></tr>
-      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">02</td><td style="padding:6px 0;">Keep it to 15 to 20 slides.</td></tr>
-      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">03</td><td style="padding:6px 0;">Leave 10 minutes for Q&amp;A.</td></tr>
-      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">04</td><td style="padding:6px 0;">Join 10 minutes early so we can say hello.</td></tr>
+      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">01</td><td style="padding:6px 0;color:#141414;">Test your Meet link a day or two before.</td></tr>
+      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">02</td><td style="padding:6px 0;color:#141414;">Keep it to 15 to 20 slides.</td></tr>
+      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">03</td><td style="padding:6px 0;color:#141414;">Leave 10 minutes for Q&amp;A.</td></tr>
+      <tr><td width="34" valign="top" style="font-weight:900;color:#2B4BD8;padding:6px 0;">04</td><td style="padding:6px 0;color:#141414;">Join 10 minutes early so we can say hello.</td></tr>
     </table>
   </td></tr>
 
-  <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
-
-  <!-- waitlist -->
-  <tr><td style="background:#2B4BD8;padding:30px 32px;">
-    <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#EFEBE3;">COMING SOON</div>
-    <div style="font-size:26px;line-height:1.12;font-weight:900;color:#FFFFFF;padding-top:8px;">host your own academi</div>
-    <div style="font-size:15px;line-height:1.55;color:#FFFFFF;padding-top:10px;">We're building an app where you can host your own Academi, earn from what you know, and run your coaching, mentoring or consulting business in one place. Early waitlist members get first access.</div>
-    <div style="padding-top:14px;"><a href="https://tally.so/r/2jEkpg?source=speaker-confirmation" style="font-size:19px;font-weight:bold;color:#FFFFFF;">Join the early waitlist &rarr;</a></div>
+  <!-- coming soon -->
+  <tr><td style="border-top:1px solid #DDD7CC;padding:26px 0 26px;">
+    <div style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#2B4BD8;">COMING SOON</div>
+    <div style="font-size:26px;line-height:1.15;font-weight:900;color:#141414;padding-top:8px;">host your own academi</div>
+    <div style="font-size:15px;line-height:1.55;color:#3A3732;padding-top:10px;">We're building an app where you can host your own Academi, earn from what you know, and run your coaching, mentoring or consulting business in one place. Early waitlist members get first access.</div>
+    <div style="padding-top:14px;"><a href="https://tally.so/r/2jEkpg?source=speaker-confirmation" style="font-size:18px;font-weight:bold;color:#2B4BD8;">Join the early waitlist &rarr;</a></div>
   </td></tr>
 
-  <!-- sign off -->
-  <tr><td style="padding:26px 4px 8px;font-size:16px;line-height:1.55;color:#3A3732;">
+  <!-- sign-off -->
+  <tr><td style="border-top:1px solid #DDD7CC;padding:24px 0 8px;font-size:16px;line-height:1.55;color:#3A3732;">
     Any questions, just reply to this email.<br><br>
     Can't wait to hear you on the {{date_ordinal}},<br>
     <strong style="color:#141414;">Conor</strong>
