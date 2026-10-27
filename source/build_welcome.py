@@ -62,15 +62,15 @@ EMAILS.append(dict(
                 + button('Open the WhatsApp community &rarr;', WA)),
     ], '', SIGN)))
 
-# 3. Day 2: The Arc question
+# 3. Day 2: Academi Podcast question
 EMAILS.append(dict(
     subject='What would you ask a pro who went independent?',
-    preview="We're building The Arc around your questions.",
+    preview="We're building The Academi Podcast around your questions.",
     delay=1,
     html=card([
-        section(kicker('THE ARC') + h1('the arc is coming.')
+        section(kicker('THE ACADEMI PODCAST') + h1('the academi podcast is coming.')
                 + para(f'Hey {FIRST},', 16, top=14)
-                + para("We're launching The Arc, a podcast about the move from athlete to coach. Every episode is a conversation with someone who has made that jump, or who helps athletes make it: players turned coaches, physios, S&amp;C coaches, sports psychologists.", 16)
+                + para("We're launching The Academi Podcast, a show about the move from athlete to coach. Every episode is a conversation with someone who has made that jump, or who helps athletes make it: players turned coaches, physios, S&amp;C coaches, sports psychologists.", 16)
                 + para("We talk about the stuff nobody tells you: landing your first clients, what to charge, building a name while you're still playing, and the admin that eats your week.", 16), first=True),
         section(kicker('HELP US SHAPE IT') + h2('send us one question')
                 + para('If you could sit down with a pro who went independent, what would you ask them? Hit reply with one question. The best ones go straight to our guests, and we credit you on the episode.')

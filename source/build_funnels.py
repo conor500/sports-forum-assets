@@ -1,7 +1,7 @@
 # The three opt-in funnels, each with its own Kit sequence, in the same 480px card as the welcome sequence.
 #   A2  academi waitlist   (Tally 2jEkpg)          -> funnel-a-<n>.html
 #   B2  gap analysis audit (Lovable app)           -> funnel-b-<n>.html
-#   C2  The Arc podcast    (Tally podcast form)    -> funnel-c-<n>.html
+#   C2  The Academi Podcast    (Tally podcast form)    -> funnel-c-<n>.html
 # Kit delays are days after the previous email. funnels.json holds subject, preview, delay and html for each.
 import json
 import os
@@ -72,12 +72,12 @@ A.append(dict(
 
 A.append(dict(
     subject='Learn from people who made the jump',
-    preview='The Arc: conversations with athletes who went independent.',
+    preview='The Academi Podcast: conversations with athletes who went independent.',
     delay=3,
     html=card([
-        section(kicker('THE ARC') + h1('learn from people who made the jump.')
+        section(kicker('THE ACADEMI PODCAST') + h1('learn from people who made the jump.')
                 + para(f'Hey {FIRST},', 16, top=14)
-                + para("The Arc is our podcast about the move from athlete to coach. Every episode is a conversation with someone who made that jump, or who helps athletes make it.", 16)
+                + para("The Academi Podcast is our show about the move from athlete to coach. Every episode is a conversation with someone who made that jump, or who helps athletes make it.", 16)
                 + para("We talk about the stuff nobody tells you: landing your first clients, what to charge, building a name while you're still playing, and the admin that eats your week.", 16), first=True),
         section(kicker('STILL THINKING ABOUT CAPE TOWN?') + h2('book a call')
                 + para('Registering your interest in the South Africa trip (1 to 5 March, Stellenbosch) starts with a call. Book one and we\'ll talk it through.')
@@ -137,19 +137,19 @@ B.append(dict(
                 + para("We're building an app where you can host your own Academi, earn from what you know, and run your coaching, mentoring or consulting business in one place.", 16)
                 + button('Join the early waitlist &rarr;', WAITLIST + 'funnel-b', top=18)
                 + para('Early waitlist members get first access, and help shape what we build.', 14, top=12), first=True),
-        section(kicker('THE ARC') + h2('hear from people who made the jump')
-                + para("The Arc is our podcast about the move from athlete to coach. Hit reply with one question you'd ask a guest who went independent.")),
+        section(kicker('THE ACADEMI PODCAST') + h2('hear from people who made the jump')
+                + para("The Academi Podcast is our show about the move from athlete to coach. Hit reply with one question you'd ask a guest who went independent.")),
     ], '', SIGN, **SA_SHELL)))
 
-# ---------------- C2: The Arc podcast ----------------
+# ---------------- C2: The Academi Podcast ----------------
 C.append(dict(
-    subject="You're in: welcome to The Arc",
+    subject="You're in: welcome to The Academi Podcast",
     preview='Conversations about the move from athlete to coach.',
     delay=0,
     html=card([
-        section(kicker('THE ARC') + h1('welcome to the arc.')
+        section(kicker('THE ACADEMI PODCAST') + h1('welcome to the academi podcast.')
                 + para(f'Hey {FIRST},', 16, top=14)
-                + para("Thanks for signing up. The Arc is our podcast about the move from athlete to coach. Every episode is a conversation with someone who made that jump, or who helps athletes make it: players turned coaches, physios, S&amp;C coaches, sports psychologists.", 16)
+                + para("Thanks for signing up. The Academi Podcast is our show about the move from athlete to coach. Every episode is a conversation with someone who made that jump, or who helps athletes make it: players turned coaches, physios, S&amp;C coaches, sports psychologists.", 16)
                 + para("We talk about the stuff nobody tells you: landing your first clients, what to charge, building a name while you're still playing, and the admin that eats your week.", 16), first=True),
         section(kicker('YOUR QUESTION') + h2('ask our guests anything')
                 + '{% if subscriber.podcast_question != blank %}'
@@ -167,7 +167,7 @@ C.append(dict(
     html=card([
         section(kicker('THE COMMUNITY') + h1('hear about every episode first.')
                 + para(f'Hey {FIRST},', 16, top=14)
-                + para("Sports Academi is our free WhatsApp community for athletes, coaches and practitioners, talking sport, careers and going independent. Members hear about each episode of The Arc first, the night before it goes public.", 16)
+                + para("Sports Academi is our free WhatsApp community for athletes, coaches and practitioners, talking sport, careers and going independent. Members hear about each episode of The Academi Podcast first, the night before it goes public.", 16)
                 + button('Join the WhatsApp community &rarr;', WA, top=18), first=True),
         section(kicker('FREE WEBINARS') + h2('every other thursday, 7pm')
                 + para('Every other Thursday at 7pm UK/Irish time, someone who has done it shares what they learned, live on Google Meet with Q&amp;A. They are free, and announced in the community first.')),
