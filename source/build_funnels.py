@@ -10,7 +10,7 @@ from build_welcome import FIRST, ADVICE
 
 SIGN = 'Conor<br><span style="color:#8C867C;font-size:13px;">Founder, Academi</span>'
 CALL = 'https://calendly.com/conor-academi/30min'
-AUDIT = 'AUDIT_URL'  # live gap analysis URL, still to come from Conor
+AUDIT = 'https://audit.academi.ie/'
 WAITLIST = 'https://tally.so/r/2jEkpg?source='
 A_SHELL = dict(logo=('logo-academi-v1.png', 'Academi', 130), tagline='Academi &middot; host your own academi', powered_by=False)
 SA_SHELL = dict(powered_by=True)
