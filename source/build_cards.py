@@ -69,17 +69,19 @@ def checklist(items):
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">{rows}</table>'
 
 
-def card(sections, preheader, footer):
+def card(sections, preheader, footer, logo=('logo-academi-sports-v1.png', 'Sports Academi', 150),
+         tagline='Sports Academi &middot; a free community for athletes, coaches and practitioners', powered_by=False):
     """The shared shell: light outer background, white 480px card, logo on top, sign-off under the card."""
     pre = f'<div style="display:none;max-height:0;overflow:hidden;">{preheader}</div>' if preheader else ''
     return (pre +
             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{OUTER}" style="background-color:{OUTER};"><tr><td align="center" style="padding:28px 12px;">'
             f'<table role="presentation" width="480" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="width:100%;max-width:480px;background-color:#FFFFFF;border:1px solid {LINE};border-radius:8px;">'
-            f'<tr><td align="center" style="padding:28px 28px 4px;"><img src="{RAW}logo-academi-sports-v1.png" width="150" alt="Sports Academi" style="display:block;width:150px;height:auto;border:0;"></td></tr>'
+            f'<tr><td align="center" style="padding:28px 28px 4px;"><img src="{RAW}{logo[0]}" width="{logo[2]}" alt="{logo[1]}" style="display:block;width:{logo[2]}px;height:auto;border:0;"></td></tr>'
             + ''.join(sections) +
             f'<tr><td style="border-top:1px solid {LINE};padding:22px 28px 26px;{F}font-size:15px;line-height:1.55;color:{BODY};">{footer}</td></tr>'
             '</table>'
-            f'<div style="{F}font-size:11px;color:{MUTED};padding-top:14px;">Sports Academi &middot; a free community for athletes, coaches and practitioners</div>'
+            + (f'<img src="{RAW}powered-by-academi-v1.png" width="90" alt="Powered by Academi" style="display:block;width:90px;height:auto;border:0;margin:18px auto 0;">' if powered_by else '') +
+            f'<div style="{F}font-size:11px;color:{MUTED};padding-top:14px;">{tagline}</div>'
             '</td></tr></table>')
 
 
