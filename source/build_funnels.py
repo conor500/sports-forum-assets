@@ -80,7 +80,7 @@ A.append(dict(
                 + para("The Arc is our podcast about the move from athlete to coach. Every episode is a conversation with someone who made that jump, or who helps athletes make it.", 16)
                 + para("We talk about the stuff nobody tells you: landing your first clients, what to charge, building a name while you're still playing, and the admin that eats your week.", 16), first=True),
         section(kicker('STILL THINKING ABOUT CAPE TOWN?') + h2('book a call')
-                + para('Spaces on the South Africa trip (1 to 5 March, Stellenbosch) start with a call. Book one and we\'ll talk it through.')
+                + para('Registering your interest in the South Africa trip (1 to 5 March, Stellenbosch) starts with a call. Book one and we\'ll talk it through.')
                 + button('Book a call with Conor &rarr;', f'{CALL}?utm_source=funnel-a')),
     ], '', SIGN, **A_SHELL)))
 
@@ -180,7 +180,7 @@ C.append(dict(
     html=card([
         section(kicker('FREE GAP ANALYSIS') + h1('find the gaps in your coaching business.')
                 + para(f'Hey {FIRST},', 16, top=14)
-                + para('The guests on The Arc all hit the same five gaps when they went independent. Our free gap analysis is 9 quick questions, takes under 2 minutes, and shows you which one is yours.', 16)
+                + para('When athletes and coaches go independent, the same five gaps come up again and again. Our free gap analysis is 9 quick questions, takes under 2 minutes, and shows you which one is yours.', 16)
                 + checklist([f'<strong>{a}</strong>' for a in ADVICE])
                 + button('Start my free analysis &rarr;', f'{AUDIT}?utm_source=funnel-c', top=18), first=True),
     ], '', SIGN, **SA_SHELL)))
